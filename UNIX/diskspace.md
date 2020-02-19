@@ -36,3 +36,22 @@ Alternative
 ```bash
 find . -name "*-$(date +%Y)*" -not -name "*.tar.gz" -exec tar -cvzf {}.tar.gz {} \; -exec rm -f {} \;
 ```
+
+## Find deleted files using disk space
+
+```bash
+lsof | grep '(deleted)'
+```
+
+Example:
+`
+COMMAND     PID     USER   FD      TYPE             DEVICE  SIZE/OFF       NODE NAME
+vmtoolsd   1077     root    3u      REG              253,4      4240         39 /tmp/vmware-root/vmware-apploader-1077.log (deleted)
+`
+
+```
+# ls -l /proc/1077/fd
+lrwx------. 1 root root 64 Feb 14 14:27 3 -> /tmp/vmware-root/vmware-apploader-1077.log (deleted)
+# rm /proc/1077/fd/3
+```
+
