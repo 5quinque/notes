@@ -6,6 +6,19 @@
 /sbin/hponcfg -w /dev/shm/tmp && grep '<IP_ADDRESS' /dev/shm/tmp
 ```
 
+## Get Fan status
+
+`hpasmcli -s 'SHOW FANS'`
+
+## HP IML Logs
+
+```bash
+hplog -v # This will show the HP IML log and the alerts tied to the fan failures.
+hplog -t # This will show the temperature zones.
+
+hplog -f # This will show the fan ID and status.
+```
+
 ## Mount virtual media
 
 Generate iso
