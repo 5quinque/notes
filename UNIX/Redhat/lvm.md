@@ -79,7 +79,7 @@ resize2fs /dev/VolGroupName/LogicalVolName
 df -h
 ```
 
-# Create LV:
+## Create LV:
 
 ```bash
 lvcreate -L 10G -nlfs volumegroup
