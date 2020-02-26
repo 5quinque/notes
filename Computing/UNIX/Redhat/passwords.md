@@ -4,6 +4,10 @@
 
 `chage -l <username>`
 
+or
+
+`passwd -S <username>`
+
 ## Set password to not expire
 
 `chage -I -1 -m 0 -M 99999 -E -1 <username>`
