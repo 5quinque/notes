@@ -10,7 +10,7 @@ So what does camber actually do? When you roll a frisbee on the floor, the frisb
 
 The other key element in RWD RC Drift is the front tire contact patch that is dictated by camber. Using the edge with less contact, or using the larger surface with more contact, on the leading and trailing tires. Typically, more negative camber will increase control, less negative camber will make the steering milder. However, this is relative to how the other alignment is set in combination with camber, and also the profile of your tire.
 
-![Camber](.images/camber.jpg)
+![Camber](./.images/camber.jpg)
 
 ### How to adjust camber?
 
