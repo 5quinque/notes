@@ -69,6 +69,8 @@ vgextend VolGroupName /dev/sdXX
 lvextend -L+100G /dev/VolGroupName/LogicalVolName
 ```
 
+In the above example, we're growing by an additional 100G. To increase to a set size, you can do `-L50G` which would set the logical volume to 50GB.
+
 ## 6. Extend FS
 
 ```bash

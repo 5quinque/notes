@@ -1,17 +1,27 @@
 # Final Drive Ratio
 
 
-# Primary Gear Ratio
+## Primary Gear Ratio
+
+To calculate your primary gear ratio:
+Spur Gear # teeth / Pinion Gear # teeth = primary gear ratio
+
+Example:
 
 Spur - `92t`
 Pinion - `26t`
 
 `92 / 26 = 3.54`
 
+Primary gear ratio is 3.54. 
+
 ## Internal Ratio
 
 `33 / 18 = 1.8`
 
+## Calculate Final Drive Ratio
+
+Multiply Primary Gear Ratio by Internal Ratio  
 Primary Gear Ratio * Internal Ratio = Final Drive Ratio  
 `3.54 * 1.8 = 6.37`
 

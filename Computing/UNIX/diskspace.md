@@ -6,6 +6,12 @@
 du -hx --max-depth=1 . | sort -h
 ```
 
+To find large subdirectories, you can grep for directories taking up more than 1GB. 
+
+```bash
+du -hx --max-depth=4 . | egrep "^[0-9\.]+G"
+```
+
 ### rhel 5
 
 ```bash
