@@ -9,7 +9,7 @@
 
 ls -l /sys/class/net/
 
-Change name in `etc/udev/rules.d/70-persistent-net.rules`
+Change name in `/etc/udev/rules.d/70-persistent-net.rules`
 
 ```
 # PCI device 0x14e4:0x1657 (tg3)
