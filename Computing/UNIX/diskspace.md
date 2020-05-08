@@ -24,6 +24,8 @@ du -x --max-depth=1 . | sort -n | cut -f2- | xargs du -xhs
 for i in G M K; do du -ah | grep [0-9]$i | sort -nr -k 1; done | head -n 11
 ```
 
+There may be more POSIX compliant version of `du` located in `/usr/xpg4/bin` that can be of use.
+
 ## Find total size of all files older than 365 days
 
 ```bash

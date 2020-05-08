@@ -1,10 +1,10 @@
 # OpenSSL Commands
 
-## Get info about certificate request
+## Get info about certificate
 
 `openssl req -noout -text -in mycsr.csr`
 
-`openssl x509 -text -in mycrt.pem`
+`openssl x509 -noout -text -in certificate.cer`
 
 ## Confirm certificate, private key and certificate signing request all match
 

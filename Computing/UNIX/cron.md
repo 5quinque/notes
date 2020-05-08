@@ -49,3 +49,7 @@ root     56649  3158  0 Feb22 ?        00:00:00 /usr/sbin/CROND -n
 Run `pstree` on the parent cron process to find what's running:
 
 `pstree -a -p 3158`
+
+Possibly find the parent cron process automatically:
+
+`pstree -a -p $(ps -ef | grep '[c]rond' | awk '{ print $2 }')`

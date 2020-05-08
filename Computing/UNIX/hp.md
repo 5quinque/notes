@@ -2,6 +2,8 @@
 
 ## Get HP iLO IP address
 
+(Must be run as root/super user)
+
 ```bash
 /sbin/hponcfg -w /dev/shm/tmp && grep '<IP_ADDRESS' /dev/shm/tmp
 ```
@@ -17,6 +19,12 @@ hplog -v # This will show the HP IML log and the alerts tied to the fan failures
 hplog -t # This will show the temperature zones.
 
 hplog -f # This will show the fan ID and status.
+```
+
+## Generate ADU Report
+
+```bash
+hpacucli ctrl all diag file=/tmp/ADUReport.zip
 ```
 
 ## Mount virtual media
