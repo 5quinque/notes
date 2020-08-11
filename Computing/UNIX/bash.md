@@ -1,5 +1,14 @@
 # Bash
 
+## Loop through a file line-by-line
+
+```bash
+while read line; do
+  echo "$p"
+done < filename
+```
+
+
    ## Event Designators
    
        An event designator is a reference to a command line entry in the  his‐
@@ -24,3 +33,4 @@
               string1 with string2.  Equivalent  to  ``!!:s/string1/string2/''
               (see Modifiers below).
        !#     The entire command line typed so far.
+
