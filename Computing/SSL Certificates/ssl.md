@@ -39,3 +39,8 @@ subjectAltName = @alt_names
 [alt_names]
 DNS.1   = sd.fqdn
 ```
+
+## Get certificate expiry of an active certificate
+
+DOMAIN="example.com"
+echo | openssl s_client -showcerts -servername $DOMAIN -connect $DOMAIN:443 2>/dev/null | openssl x509 -inform pem -noout -text | egrep '(Not Before|Not After)'

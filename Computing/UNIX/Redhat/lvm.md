@@ -25,7 +25,7 @@ p
 
 
 t # Change partitions system ID to Linux LVM
-8e
+8e # 8e for DOS partition, 31 for GPT
 
 p # Print partition table to confirm
 

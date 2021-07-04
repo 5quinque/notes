@@ -63,3 +63,8 @@ lrwx------. 1 root root 64 Feb 14 14:27 3 -> /tmp/vmware-root/vmware-apploader-1
 # rm /proc/1077/fd/3
 ```
 
+If you get `Operation not permitted` from the above `rm` command run:
+
+```
+# : > /proc/1077/fd/3
+```
