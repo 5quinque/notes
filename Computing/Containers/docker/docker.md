@@ -44,13 +44,47 @@ sudo usermod -aG docker $USER
 
 `docker exec -it <mycontainer> bash`
 
+## Start on boot
+
+Get current restart policy
+`docker inspect <containername> --format='{{.HostConfig.RestartPolicy.Name}}'`
+
+`docker update --restart unless-stopped <containername>`
+
+Get the status of all your containers
+
+```bash
+for id in $(docker ps -a -q)
+do
+    docker inspect $id --format='{{.Name}} {{.HostConfig.RestartPolicy.Name}}'
+done
+```
+
+Update all your containers to auto start
+
+```bash
+for id in $(docker ps -a -q)
+do
+    docker update --restart unless-stopped $id
+done
+```
+
+## Find containers set to auto remove
+
+```bash
+for id in $(docker ps -a -q)
+do
+    docker inspect $id --format='{{.Name}} {{.HostConfig.AutoRemove}}'
+done | grep true
+```
+
 ## Simple Apache Webserver
 
-https://hub.docker.com/_/httpd
+https://hub.docker.com/_/httpd  
 
 `docker build -t web-name .`
 `docker run -dit --name web-name -p 8080:80 web-name`
---
+
 
  4355  docker build -t mite .
  4376  docker run --rm -it mite sh
